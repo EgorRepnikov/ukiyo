@@ -1,0 +1,25 @@
+{
+  "name": "ukiyo",
+  "version": "0.1.0",
+  "scripts": {
+    "install": "npm install --prefix server && npm install --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm run start --prefix server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EgorRepnikov/ukiyo.git"
+  },
+  "author": "Egor Repnikov <egorepnikov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EgorRepnikov/ukiyo/issues"
+  },
+  "homepage": "https://github.com/EgorRepnikov/ukiyo#readme",
+  "dependencies": {
+    "concurrently": "^5.0.2"
+  }
+}
