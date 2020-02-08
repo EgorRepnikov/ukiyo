@@ -2,7 +2,7 @@ const { routing, json } = require('dragonrend')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
-const { User } = require('../models')
+const { Settings, User } = require('../models')
 const { config } = require('../lib')
 
 const { POST } = module.exports = routing({ prefix: '/auth' })
@@ -15,6 +15,7 @@ POST('/register', async ({ request: { name, email, password } }) => {
   const salt = await bcrypt.genSalt(10)
   const hash = await bcrypt.hash(password, salt)
   const res = await new User({ email, name, password: hash }).save()
+  await new Settings({ user: res._id, storages: [] })
   return json(201, res)
 })
 

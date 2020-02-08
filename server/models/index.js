@@ -1,3 +1,4 @@
+const Settings = require('./Settings')
 const User = require('./User')
 
-module.exports = { User }
+module.exports = { Settings, User }
