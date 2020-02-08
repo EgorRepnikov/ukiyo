@@ -8,8 +8,12 @@
   },
   "author": "Egor Repnikov <egorepnikov@gmail.com>",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
     "dragonrend": "^0.18.1",
-    "dotenv": "^8.2.0"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.11",
+    "mongoose-private-paths": "^0.7.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
