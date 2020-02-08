@@ -8,7 +8,8 @@
   },
   "author": "Egor Repnikov <egorepnikov@gmail.com>",
   "dependencies": {
-    "dragonrend": "^0.18.1"
+    "dragonrend": "^0.18.1",
+    "dotenv": "^8.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
