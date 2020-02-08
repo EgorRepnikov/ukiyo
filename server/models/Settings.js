@@ -23,4 +23,4 @@ const schema = new Schema({
 
 schema.plugin(privatePaths)
 
-module.exports = model('users', schema)
+module.exports = model('settings', schema)
