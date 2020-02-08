@@ -1,5 +1,4 @@
-const { get, readJson } = require('../lib/utils')
-const config = require('../lib/config')
+const { config, get, readJson } = require('../lib')
 
 exports.getFilesList = async (folderId) => {
   const res = await get('https://www.googleapis.com/drive/v3/files', {
