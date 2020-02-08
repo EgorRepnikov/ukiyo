@@ -32,5 +32,5 @@ exports.pipeFile = async (fileId, stream) => {
     key: config.GOOGLE_API_KEY,
     alt: 'media'
   })
-  res.pipe(stream)
+  res.pipe(stream, { end: true })
 }
