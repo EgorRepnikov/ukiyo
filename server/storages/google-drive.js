@@ -1,8 +1,9 @@
 const { get, readJson } = require('../lib/utils')
+const config = require('../lib/config')
 
 exports.getFilesList = async (folderId) => {
   const res = await get('https://www.googleapis.com/drive/v3/files', {
-    key: process.env.GOOGLE_KEY,
+    key: config.GOOGLE_API_KEY,
     q: `'${folderId}' in parents`
   })
   const body = await readJson(res)
@@ -11,7 +12,7 @@ exports.getFilesList = async (folderId) => {
 
 exports.pipeFile = async (fileId, stream) => {
   const res = await get(`https://www.googleapis.com/drive/v3/files/${fileId}`, {
-    key: process.env.GOOGLE_KEY,
+    key: config.GOOGLE_API_KEY,
     alt: 'media'
   })
   res.pipe(stream)
