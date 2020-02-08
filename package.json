@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/EgorRepnikov/ukiyo#readme",
   "dependencies": {
-    "concurrently": "^5.0.2"
+    "concurrently": "^5.0.2",
+    "dotenv": "^8.2.0",
+    "googleapis": "^47.0.0"
   }
 }

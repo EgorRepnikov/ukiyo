@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const { dragonrend } = require('dragonrend')
 
 const { START } = dragonrend({ autoIncluding: true })
