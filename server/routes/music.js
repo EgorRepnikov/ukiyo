@@ -8,7 +8,7 @@ const { getFilesList, pipeFile } = require('../storages')
 const { GET } = module.exports = routing({ prefix: '/music' })
 
 GET('/', authenticate, async ({ request: { query } }) => {
-  const filesList = await getFilesList(query.storage, query.search)
+  const filesList = await getFilesList(query.storage, query.folder)
   return json(filesList)
 })
 

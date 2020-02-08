@@ -4,8 +4,8 @@ const storages = {
   'google-drive': googleDrive,
 }
 
-exports.getFilesList = (storageKey, searchData) =>
-  storages[storageKey].getFilesList(searchData)
+exports.getFilesList = (storageName, folderId) =>
+  storages[storageName].getFilesList(folderId)
 
-exports.pipeFile = (storageName, searchData, stream) =>
-  storages[storageName].pipeFile(searchData, stream)
+exports.pipeFile = (storageName, fileId, stream) =>
+  storages[storageName].pipeFile(fileId, stream)
