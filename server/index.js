@@ -1,7 +1,9 @@
 require('dotenv').config()
 
 const { dragonrend } = require('dragonrend')
-const { config } = require('./lib')
+const { config, mongooseConnector } = require('./lib')
+
+mongooseConnector()
 
 const { START } = dragonrend({
   autoIncluding: true,
