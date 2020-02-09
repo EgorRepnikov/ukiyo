@@ -7,12 +7,12 @@ const { getFilesList, pipeFile } = require('../storages')
 
 const { GET } = module.exports = routing({ prefix: '/music' })
 
-GET('/', authenticate, async ({ request: { query } }) => {
+GET('/list', authenticate, async ({ request: { query } }) => {
   const filesList = await getFilesList(query.storage, query.folder)
   return json(filesList)
 })
 
-GET('/:fileId', authenticate, ({ request: { query, params }, response }) => {
+GET('/file', ({ request: { query }, response }) => {
   response[symbols.isSentS] = true
-  pipeFile(query.storage, params.fileId, response[symbols.resS])
+  pipeFile(query.storage, query.file, response[symbols.resS])
 })
