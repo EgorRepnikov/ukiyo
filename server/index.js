@@ -1,6 +1,7 @@
 require('dotenv').config()
 
 const { dragonrend } = require('dragonrend')
+const { config } = require('./lib')
 
 const { START } = dragonrend({
   autoIncluding: true,
@@ -9,4 +10,4 @@ const { START } = dragonrend({
   }
 })
 
-START(8080, () => console.log('Server has been started'))
+START(config.PORT, () => console.log(`Server has been started ${config.PORT}`))
