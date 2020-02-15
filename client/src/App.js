@@ -4,7 +4,7 @@ import { useRoutes } from 'hookrouter'
 import jwtDecode from 'jwt-decode'
 
 import store from './store'
-import { Login, Register } from './components'
+import { Login, Register, NotFound } from './components'
 import { setAuthToken } from './utils'
 import { setCurrentUser, logout } from './actions/auth'
 
@@ -26,7 +26,7 @@ const routes = {
 }
 
 function App() {
-  const routeResult = useRoutes(routes) || <div></div>
+  const routeResult = useRoutes(routes) || <NotFound />
   return (
     <Provider store={store}>
       {routeResult}
