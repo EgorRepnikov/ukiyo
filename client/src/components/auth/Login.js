@@ -21,20 +21,20 @@ const Login_ = ({ auth, login }) => {
 
   return (
     <React.Fragment>
-      <div class="sidenav">
-        <div class="login-main-text">
+      <div className="sidenav">
+        <div className="login-main-text">
           <h2>Ukiyo<br /> Log In</h2>
           <p>Log In to start listening.</p>
         </div>
       </div>
-      <div class="main">
-        <div class="col-md-6 col-sm-12">
-          <div class="login-form">
+      <div className="main">
+        <div className="col-md-6 col-sm-12">
+          <div className="login-form">
             <form onSubmit={onSubmit}>
-              <div class="form-group">
+              <div className="form-group">
                 <label>Email</label>
                 <input
-                  class="form-control"
+                  className="form-control"
                   placeholder="Email"
                   type="email"
                   name="email"
@@ -44,10 +44,10 @@ const Login_ = ({ auth, login }) => {
                   required
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label>Password</label>
                 <input
-                  class="form-control"
+                  className="form-control"
                   placeholder="Password"
                   type="password"
                   name="password"
@@ -57,8 +57,8 @@ const Login_ = ({ auth, login }) => {
                   required
                 />
               </div>
-              <button type="submit" class="btn btn-black">Login</button>
-              {/* <button type="submit" class="btn btn-secondary">Register</button> */}
+              <button type="submit" className="btn btn-black">Login</button>
+              {/* <button type="submit" className="btn btn-secondary">Register</button> */}
             </form>
           </div>
         </div>

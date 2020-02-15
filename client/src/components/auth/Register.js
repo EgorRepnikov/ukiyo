@@ -21,20 +21,20 @@ const Register_ = ({ auth, register }) => {
 
   return (
     <React.Fragment>
-      <div class="sidenav">
-        <div class="login-main-text">
+      <div className="sidenav">
+        <div className="login-main-text">
           <h2>Ukiyo<br /> Registration</h2>
           <p>Register to start listening.</p>
         </div>
       </div>
-      <div class="main">
-        <div class="col-md-6 col-sm-12">
-          <div class="login-form">
+      <div className="main">
+        <div className="col-md-6 col-sm-12">
+          <div className="login-form">
             <form onSubmit={onSubmit}>
-              <div class="form-group">
+              <div className="form-group">
                 <label>Email</label>
                 <input
-                  class="form-control"
+                  className="form-control"
                   placeholder="Email"
                   type="email"
                   name="email"
@@ -44,10 +44,10 @@ const Register_ = ({ auth, register }) => {
                   required
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label>Password</label>
                 <input
-                  class="form-control"
+                  className="form-control"
                   placeholder="Password"
                   type="password"
                   name="password"
@@ -57,8 +57,8 @@ const Register_ = ({ auth, register }) => {
                   required
                 />
               </div>
-              <button type="submit" class="btn btn-black">Register</button>
-              {/* <button type="submit" class="btn btn-secondary">Register</button> */}
+              <button type="submit" className="btn btn-black">Register</button>
+              {/* <button type="submit" className="btn btn-secondary">Register</button> */}
             </form>
           </div>
         </div>

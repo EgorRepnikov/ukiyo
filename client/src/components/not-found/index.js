@@ -5,13 +5,13 @@ import './styles.css'
 
 export const NotFound = () => (
   <React.Fragment>
-    <section class="error-container">
-      <span class="four"><span class="screen-reader-text">4</span></span>
-      <span class="zero"><span class="screen-reader-text">0</span></span>
-      <span class="four"><span class="screen-reader-text">4</span></span>
+    <section className="error-container">
+      <span className="four"><span className="screen-reader-text">4</span></span>
+      <span className="zero"><span className="screen-reader-text">0</span></span>
+      <span className="four"><span className="screen-reader-text">4</span></span>
     </section>
-    <div class="link-container">
-      <A href="/" class="more-link">To Home</A>
+    <div className="link-container">
+      <A href="/" className="more-link">To Home</A>
     </div>
   </React.Fragment>
 )
