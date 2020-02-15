@@ -7,19 +7,19 @@ const { config } = require('../lib')
 
 const { POST } = module.exports = routing({ prefix: '/auth' })
 
-POST('/register', async ({ request: { name, email, password } }) => {
+POST('/register', async ({ request: { body: { email, password } } }) => {
   const user = await User.findOne({ email })
   if (user) {
     return json(400, { error: 'Email already exists' })
   }
   const salt = await bcrypt.genSalt(10)
   const hash = await bcrypt.hash(password, salt)
-  const res = await new User({ email, name, password: hash }).save()
+  const res = await new User({ email, password: hash }).save()
   await new Settings({ user: res._id, storages: [] })
   return json(201, res)
 })
 
-POST('/login', async ({ request: { email, password } }) => {
+POST('/login', async ({ request: { body: { email, password } } }) => {
   const user = await User.findOne({ email })
   if (!user) {
     return json(400, { error: 'User with this email does not exist' })
@@ -28,7 +28,6 @@ POST('/login', async ({ request: { email, password } }) => {
   if (isMatch) {
     const payload = {
       id: user.id,
-      name: user.name,
       email: user.email
     }
     const token = jwt.sign(payload, config.secret, { expiresIn: 3600 * 24 })
