@@ -14,7 +14,7 @@ const Register_ = ({ auth, register }) => {
     }
   }, [])
 
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault()
     register({ email, password })
   }

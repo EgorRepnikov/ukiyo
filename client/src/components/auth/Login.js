@@ -14,7 +14,7 @@ const Login_ = ({ auth, login }) => {
     }
   }, [auth])
 
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault()
     login({ email, password })
   }
