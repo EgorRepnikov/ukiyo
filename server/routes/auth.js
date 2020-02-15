@@ -30,7 +30,7 @@ POST('/login', async ({ request: { body: { email, password } } }) => {
       id: user.id,
       email: user.email
     }
-    const token = jwt.sign(payload, config.secret, { expiresIn: 3600 * 24 })
+    const token = jwt.sign(payload, config.SECRET, { expiresIn: 3600 * 24 })
     return json({ token })
   } else {
     return json(400, { error: 'Password incorrect' })
