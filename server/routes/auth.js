@@ -15,7 +15,7 @@ POST('/register', async ({ request: { body: { email, password } } }) => {
   const salt = await bcrypt.genSalt(10)
   const hash = await bcrypt.hash(password, salt)
   const res = await new User({ email, password: hash }).save()
-  await new Settings({ user: res._id, storages: [] })
+  await new Settings({ user: res._id, storages: [] }).save()
   return json(201, res)
 })
 
